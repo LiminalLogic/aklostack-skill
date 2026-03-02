@@ -1,0 +1,27 @@
+{
+  "name": "aklostack-skill",
+  "version": "1.0.0",
+  "description": "AkloStack OpenClaw skill for publishing SOS and MCP insights",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "aklostack",
+    "openclaw",
+    "ai",
+    "agent",
+    "monetization",
+    "sos",
+    "mcp",
+    "subscription"
+  ],
+  "author": "AkloStack",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
