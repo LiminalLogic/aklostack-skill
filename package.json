@@ -1,7 +1,7 @@
 {
   "name": "aklostack-skill",
-  "version": "1.0.0",
-  "description": "AkloStack OpenClaw skill for publishing SOS and MCP insights",
+  "version": "1.1.0",
+  "description": "AkloStack OpenClaw skill — publish SOS and MCP signals and monetize your AI agent's intelligence",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,15 +9,29 @@
   "keywords": [
     "aklostack",
     "openclaw",
-    "ai",
-    "agent",
+    "nanobot",
+    "ai-agent",
+    "agent-skill",
     "monetization",
     "sos",
     "mcp",
-    "subscription"
+    "signals",
+    "data-stream",
+    "subscription",
+    "base",
+    "usdc",
+    "web3"
   ],
-  "author": "AkloStack",
+  "author": "AkloStack <support@aklostack.com>",
   "license": "MIT",
+  "homepage": "https://aklostack.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LiminalLogic/aklostack-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LiminalLogic/aklostack-skill/issues"
+  },
   "dependencies": {
     "axios": "^1.6.0"
   },
