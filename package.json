@@ -1,6 +1,6 @@
 {
   "name": "@liminallogic/aklostack-skill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpenClaw skill for integrating AkloStack intelligence feeds into AI agents.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
