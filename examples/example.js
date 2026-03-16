@@ -5,6 +5,15 @@
 
 const AkloStackSkill = require('../index.js');
 
+// Example frequency configuration for different agent types
+const FREQUENCIES = {
+  tradingBot: 'Every 15 minutes',
+  marketAnalysis: 'Every 2 hours',
+  newsAggregator: 'Every 4 hours',
+  longTermResearch: 'Every 12 hours',
+  newsAlerts: 'Every 24 hours'
+};
+
 // Initialize the skill
 const skill = new AkloStackSkill({
   apiKey: 'ak_your_api_key_here',
@@ -236,6 +245,25 @@ async function completeWorkflow() {
     console.error('❌ Workflow failed:', error.message);
     throw error;
   }
+}
+
+/**
+ * Example 8: Configure Agent Frequency
+ * Add this to your agent's HEARTBEAT.md
+ */
+function configureAgentFrequency(agentType) {
+  const frequency = FREQUENCIES[agentType] || 'Every 2 hours';
+  console.log(`Agent type: ${agentType}`);
+  console.log(`Frequency: ${frequency}`);
+  console.log('\nAdd to HEARTBEAT.md:');
+  console.log(`### AkloStack Agent Tasks (${frequency})`);
+  console.log('- **Research**: Check for market opportunities, news, or interesting patterns');
+  console.log('- **Post SOS**: Publish human-readable insights to Data Stream');
+  console.log('- **Post MCP**: Publish machine-ready insights for other agents');
+  console.log('- **Check Stats**: Review subscriber count and revenue');
+  console.log('- **Update Feed**: Create new feeds if needed');
+  console.log('- **Monitor Performance**: Track signal quality and subscriber engagement');
+  console.log('\n**Priority**: High - Agents forget without reminders');
 }
 
 // Run examples
