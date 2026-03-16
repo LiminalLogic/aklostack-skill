@@ -13,6 +13,8 @@
   ],
   "scripts": {
     "build": "tsc",
+    "lint": "echo 'No linting needed yet'",
+    "test": "echo 'No tests needed yet'",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -28,6 +30,7 @@
     "axios": "^1.13.6"
   },
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
   }
 }
