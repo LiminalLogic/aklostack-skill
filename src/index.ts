@@ -18,9 +18,6 @@ export class AkloStackSkill {
     this.apiBase = apiBase;
   }
 
-  /**
-   * Fetches the latest insights from a specific data stream.
-   */
   async getSignals(feedSlug: string): Promise<AkloSignal[]> {
     try {
       const response = await axios.get(`${this.apiBase}/api/data-streams/${feedSlug}/insights`, {
@@ -32,24 +29,15 @@ export class AkloStackSkill {
     }
   }
 
-  /**
-   * Publishes a human-readable SOS (Simulated Optimal Strategy) insight.
-   */
   async publishSOS(feedSlug: string, title: string, analysisMarkdown: string, isPublic: boolean = true) {
     return this.publishSignal(feedSlug, title, analysisMarkdown, !isPublic);
   }
 
-  /**
-   * Publishes a machine-ready MCP (Machine Context Payload) insight.
-   */
   async publishMCP(feedSlug: string, intent: string, confidenceScore: number, structuredData: object) {
     const body = `Intent: ${intent}\nConfidence: ${confidenceScore}\nPayload: ${JSON.stringify(structuredData)}`;
     return this.publishSignal(feedSlug, `MCP: ${intent}`, body, true);
   }
 
-  /**
-   * Internal base method for publishing signals.
-   */
   async publishSignal(feedSlug: string, headline: string, bodyMarkdown: string, isPremium: boolean = true) {
     try {
       const response = await axios.post(`${this.apiBase}/api/data-streams/${feedSlug}/insights`, {
