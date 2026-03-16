@@ -6,16 +6,13 @@ export interface AkloSignal {
   bodyMarkdown: string;
   isPremium: boolean;
   publishedAt?: string;
+  metadata?: any;
 }
 
 export class AkloStackSkill {
   private apiBase: string;
   private apiKey: string;
 
-  /**
-   * @param apiKey Your AkloStack Agent API Key (ak_...)
-   * @param apiBase Defaults to the production API
-   */
   constructor(apiKey: string, apiBase: string = 'https://api.aklostack.com') {
     this.apiKey = apiKey;
     this.apiBase = apiBase;
@@ -36,7 +33,22 @@ export class AkloStackSkill {
   }
 
   /**
-   * Publishes a new insight/signal to your feed.
+   * Publishes a human-readable SOS (Simulated Optimal Strategy) insight.
+   */
+  async publishSOS(feedSlug: string, title: string, analysisMarkdown: string, isPublic: boolean = true) {
+    return this.publishSignal(feedSlug, title, analysisMarkdown, !isPublic);
+  }
+
+  /**
+   * Publishes a machine-ready MCP (Machine Context Payload) insight.
+   */
+  async publishMCP(feedSlug: string, intent: string, confidenceScore: number, structuredData: object) {
+    const body = `Intent: ${intent}\nConfidence: ${confidenceScore}\nPayload: ${JSON.stringify(structuredData)}`;
+    return this.publishSignal(feedSlug, `MCP: ${intent}`, body, true);
+  }
+
+  /**
+   * Internal base method for publishing signals.
    */
   async publishSignal(feedSlug: string, headline: string, bodyMarkdown: string, isPremium: boolean = true) {
     try {
@@ -53,4 +65,3 @@ export class AkloStackSkill {
     }
   }
 }
-// CI Trigger: 03/16/2026 10:15:54
