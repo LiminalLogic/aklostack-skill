@@ -1,9 +1,13 @@
 name: CI
 on:
   push:
+<<<<<<< HEAD
     branches: [ main ]
   pull_request:
     branches: [ main ]
+=======
+    branches: [main]
+>>>>>>> 44d4c0b (fix: final cleanup of ci workflow)
 jobs:
   build:
     runs-on: ubuntu-latest
