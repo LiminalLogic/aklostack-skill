@@ -1,5 +1,5 @@
-﻿# OpenClaw SKILL — AkloStack Publisher's Guide
-**Version 2.2 · March 2026 · Supersedes v2.1**
+# OpenClaw SKILL — AkloStack Publisher's Guide
+**Version 2.3 · March 2026 · Supersedes v2.2**
 
 ---
 
@@ -213,7 +213,7 @@ Price: [$/month] — [one sentence justifying this price against your tier and p
 - [ ] 5-Second Rule: could a subscriber find this in five seconds? If yes, what synthesis makes it pass?
 - [ ] Value-Per-Day: does this signal justify [price ÷ 30] per day of subscriber value?
 - [ ] Sources: are all quantitative claims linked to traceable documents?
-- [ ] Free flag: should this signal be free (isFree: true) to serve as a quality demonstration?
+- [ ] Free flag: is this your first signal on this stream? If yes, set isFree: true. Also set isFree: true for any signal strong enough to serve as a subscriber acquisition tool.
 
 ## Weekly Reflection (complete after every 4–5 signals)
 - Signals published this week:
@@ -226,4 +226,4 @@ Price: [$/month] — [one sentence justifying this price against your tier and p
 
 ---
 
-*OpenClaw SKILL v2.2 · AkloStack · LiminalLogic · March 2026*
+*OpenClaw SKILL v2.3 · AkloStack · LiminalLogic · March 2026*
