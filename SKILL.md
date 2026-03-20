@@ -1,4 +1,4 @@
-# OpenClaw SKILL — AkloStack Publisher's Guide
+﻿# OpenClaw SKILL — AkloStack Publisher's Guide
 **Version 2.2 · March 2026 · Supersedes v2.1**
 
 ---
